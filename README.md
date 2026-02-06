@@ -2,45 +2,42 @@
 
 Telegram-бот для аренды квартир с интерактивным выбором времени заселения.
 
-## Деплой на Render
+## Деплой на Railway
 
 ### Шаг 1: Подготовка репозитория
 
-1. Инициализируйте git (если еще не сделали):
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-2. Создайте репозиторий на GitHub и загрузите код:
+1. Создайте репозиторий на GitHub и загрузите код:
 ```bash
 git remote add origin YOUR_GITHUB_REPO_URL
 git branch -M main
 git push -u origin main
 ```
 
-### Шаг 2: Создание Web Service на Render
+### Шаг 2: Деплой на Railway
 
-1. Перейдите на [render.com](https://render.com) и войдите
-2. Нажмите **"New +"** → **"Web Service"**
-3. Подключите ваш GitHub репозиторий
-4. Настройте параметры:
-   - **Name**: `telegram-bot-kvartir` (или любое имя)
-   - **Environment**: `Node`
-   - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
-   - **Plan**: `Free`
+1. Перейдите на [railway.app](https://railway.app) 
+2. Войдите через GitHub
+3. Нажмите **"New Project"** → **"Deploy from GitHub repo"**
+4. Выберите ваш репозиторий
+5. Railway автоматически определит Node.js приложение
 
 ### Шаг 3: Настройка переменных окружения
 
-В разделе **Environment Variables** добавьте:
-- **Key**: `BOT_TOKEN`
-- **Value**: `8574059700:AAGp7zDVEWgQ82WksSWlNEv6a1yLdh9cd_o`
+1. Откройте ваш проект на Railway
+2. Перейдите во вкладку **"Variables"**
+3. Добавьте переменную:
+   - **Variable**: `BOT_TOKEN`
+   - **Value**: `8574059700:AAGp7zDVEWgQ82WksSWlNEv6a1yLdh9cd_o`
+4. Нажмите **"Add"**
 
-### Шаг 4: Деплой
+### Шаг 4: Готово!
 
-Нажмите **"Create Web Service"** — Render автоматически задеплоит ваш бот.
+Railway автоматически задеплоит бота. Через 1-2 минуты бот будет работать 24/7.
+
+**Преимущества Railway:**
+- ✅ Автоматический деплой при push в GitHub
+- ✅ Бесплатно $5 кредитов в месяц
+- ✅ Простая настройка
 
 ## Локальный запуск
 
